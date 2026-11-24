@@ -41,14 +41,15 @@
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950">
 
+
   <!-- ==================== 1. STICKY NAVIGATION BAR ==================== -->
   <nav class="sticky top-0 z-50 glass-header border-b border-indigo-500/20 shadow-xl transition-all duration-300">
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
       <div class="flex h-20 items-center justify-between gap-2 sm:gap-4">
         
-        <!-- Round Logo & Brand (Matching User's Request: Round white background matching logo) -->
+        <!-- Round Logo & Brand (Round white background snugly matching logo circle) -->
         <a href="#home" class="flex shrink-0 items-center gap-3 group" aria-label="INNOBUS 2027 Home">
-          <div class="w-12 h-12 rounded-full bg-white p-1 shadow-md border-2 border-amber-400 flex items-center justify-center overflow-hidden shrink-0 transform group-hover:scale-105 transition">
+          <div class="w-12 h-12 rounded-full bg-white shadow-md border-2 border-amber-400 flex items-center justify-center overflow-hidden shrink-0 transform group-hover:scale-105 transition">
             <img src="assets/images/vu_logo-removebg.png" alt="Vidyasagar University Logo" class="w-full h-full object-contain">
           </div>
           <div class="leading-tight">
@@ -61,7 +62,7 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links (Strictly single-row, no 2-row wrapping, vibrant icons, ICSTS hover effect) -->
+        <!-- Desktop Navigation Links (Strictly single-row, no 2-row wrapping, vibrant golden icons, ICSTS hover effect) -->
         <div class="hidden lg:flex items-center gap-1 xl:gap-2 text-[12px] xl:text-[13px] font-semibold flex-nowrap whitespace-nowrap">
           <a href="#home" class="nav-link">
             <i class="fa-solid fa-house"></i> Home
@@ -113,7 +114,7 @@
   <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex flex-col p-6 overflow-y-auto">
     <div class="flex items-center justify-between pb-4 border-b border-slate-800">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-white p-1 border border-amber-400">
+        <div class="w-10 h-10 rounded-full bg-white border border-amber-400 overflow-hidden flex items-center justify-center">
           <img src="assets/images/vu_logo-removebg.png" alt="VU" class="w-full h-full object-contain">
         </div>
         <span class="font-heading font-black text-amber-400 text-lg">INNOBUS 2027</span>
@@ -162,17 +163,30 @@
   </div>
 
   <!-- ==================== 2. SECTION: HOME (HERO SECTION - Layout strictly inspired by icsts2026.in/#home) ==================== -->
-  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-[#09152E] via-[#0D1D3E] to-[#081226] text-white pt-16 pb-0">
+  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-[#09152E] via-[#0D1D3E] to-[#081226] text-white pt-6 sm:pt-8 pb-0">
     
-    <!-- Ambient Glow Orbs & Grid Overlay (like ICSTS) -->
+    <!-- Ambient Glow Orbs -->
     <div class="hero-orb w-96 h-96 -left-20 -top-20 bg-indigo-600/30"></div>
     <div class="hero-orb w-80 h-80 right-[-80px] top-1/4 bg-amber-500/20" style="animation-delay: -4s;"></div>
     <div class="hero-orb w-96 h-96 bottom-10 left-1/3 bg-cyan-600/20" style="animation-delay: -8s;"></div>
 
+    <!-- Transparent Cyber Grid Pattern (Like ICSTS) -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-home" width="46" height="46" patternUnits="userSpaceOnUse">
+          <path d="M46 0H0V46" fill="none" stroke="white" stroke-width="1" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-home)" />
+    </svg>
+
+    <!-- Dynamic Faint Particle Constellation Canvas (Exact ICSTS 2026 Engine) -->
+    <canvas id="particles-hero" class="absolute inset-0 w-full h-full pointer-events-none opacity-65 z-0" aria-hidden="true"></canvas>
+
     <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
       
       <!-- Top Department Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-900/60 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 shadow-lg">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-900/60 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-lg">
         <i class="fa-solid fa-award text-amber-400"></i> Department of Commerce &bull; Vidyasagar University
       </div>
 
@@ -180,7 +194,7 @@
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading leading-tight text-white mb-6">
         International Conference on<br class="hidden sm:inline">
         <span class="text-gold-grad">Innovative Business Practices</span><br>
-        <span class="text-2xl sm:text-3xl lg:text-4xl text-amber-300 font-extrabold tracking-normal">
+        <span class="text-2xl sm:text-3xl lg:text-4xl text-gold-grad font-extrabold tracking-normal">
           (INNOBUS 2027)
         </span>
       </h1>
@@ -200,7 +214,7 @@
           <i class="fa-solid fa-calendar-day text-amber-400"></i> March 25, 2027
         </span>
         <span class="glass-box inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-emerald-300 border border-emerald-400/40 shadow-md">
-          <i class="fa-solid fa-laptop-code text-emerald-400"></i> [IN HYBRID MODE]
+          <i class="fa-solid fa-laptop-code text-emerald-400"></i> IN HYBRID MODE
         </span>
         <span class="glass-box inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-cyan-300 border border-cyan-400/40 shadow-md">
           <i class="fa-solid fa-location-dot text-cyan-400"></i> Vidyasagar University Campus, Midnapore
@@ -228,7 +242,7 @@
       </div>
 
       <!-- Action Buttons (CTAs with golden glow & hover effect) -->
-      <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-8 sm:mb-10">
         <a href="https://forms.gle/X7GuKCpuLoebS2hA8" target="_blank" rel="noopener noreferrer" 
            class="px-8 py-3.5 rounded-full font-heading font-black text-sm uppercase tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-xl shadow-amber-500/25 transition transform hover:-translate-y-1 flex items-center gap-2">
           <i class="fa-solid fa-ticket"></i> Register Online
@@ -241,13 +255,6 @@
            class="px-7 py-3.5 rounded-full font-heading font-semibold text-sm bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-700 transition flex items-center gap-2">
           <i class="fa-solid fa-calendar-check text-rose-400"></i> Important Deadlines
         </a>
-      </div>
-
-      <!-- Centered Venue Title -->
-      <div class="pt-6 pb-2 text-center">
-        <h2 class="text-xl sm:text-2xl font-bold font-heading text-amber-300 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-location-dot"></i> Venue: Vidyasagar University Campus, Midnapore
-        </h2>
       </div>
 
     </div>
@@ -295,15 +302,39 @@
 
     <!-- Wave Divider into #about -->
     <div class="section-wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#064E3B" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-about" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="white" stroke-width="1.2" /><circle cx="30" cy="30" r="1.5" fill="white" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-about)" />
       </svg>
     </div>
   </section>
 
-  <!-- ==================== 3. SECTION: ABOUT - Color: Emerald & Forest Teal ==================== -->
-  <section id="about" class="bg-[#064E3B] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== 3. SECTION: ABOUT - Color: Emerald & Forest Teal (Exact text from latest document) ==================== -->
+  <section id="about" class="relative overflow-hidden bg-[#064E3B] text-white pt-8 pb-0">
+
+    <!-- Transparent Isometric Matrix Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-about" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="white" stroke-width="1" />
+          <circle cx="30" cy="30" r="1.5" fill="white" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-about)" />
+    </svg>
+
+    <!-- Drifting Emerald Glow Orbs -->
+    <div class="orb w-80 h-80 -left-20 top-20 bg-emerald-400/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 right-[-60px] bottom-40 bg-teal-300/15" style="animation-delay: -5s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-12">
         <span class="section-heading-badge bg-emerald-950/80 border border-emerald-400/40 text-emerald-200">
@@ -317,70 +348,80 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         
-        <!-- About the Conference (Exact text from vucommerce with interactive hover) -->
+        <!-- About the Conference (Exact text from latest document) -->
         <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-emerald-400/30 flex flex-col justify-between">
           <div>
-            <h3 class="text-2xl font-bold font-heading text-amber-300 mb-4 flex items-center gap-2.5">
-              <i class="fa-solid fa-graduation-cap"></i> About the Conference
-            </h3>
+            <div class="mb-4">
+              <h3 class="text-2xl font-bold font-heading text-amber-300 flex items-center gap-2.5">
+                <i class="fa-solid fa-graduation-cap"></i> About the Conference
+              </h3>
+              <p class="text-xs uppercase tracking-wider text-emerald-200 font-bold mt-1">
+                International Conference on Innovative Business Practices
+              </p>
+            </div>
+            
             <div class="space-y-4 text-sm sm:text-base text-slate-100 leading-relaxed text-justify font-normal">
               <p>
-                The evolving landscape of India's fiscal architecture demands renewed scholarly attention,
-                especially at a time when the nation stands at the threshold of a structural economic
-                transformation. The introduction of Goods and Services Tax (GST) in 2017 marked a
-                watershed moment in indirect taxation, bringing significant changes to tax administration,
-                compliance, revenue generation, and inter-governmental fiscal relations.
+                The rapidly evolving global business environment, driven by technological advancements, digital transformation, changing consumer preferences, increasing globalisation and sustainability concerns, has created new opportunities as well as challenges for businesses and institutions. Traditional approaches to business management, finance, marketing, accounting and entrepreneurship are increasingly being reshaped by innovation, emerging technologies and changing socio-economic priorities. In this context, the adoption of innovative, sustainable, inclusive and ethically responsible business practices has become essential for achieving long-term organisational success and sustainable economic development.
               </p>
               <p>
-                Simultaneously, India’s integration with global financial markets is
-                deepening. Capitals flows - FDI, FPI, external commercial borrowings,
-                remittances, and fintech-driven cross-border transactions - play a pivotal
-                role in influencing domestic investment, macroeconomic stability,
-                exchange rate dynamics, and overall economic growth. India’s moves
-                toward GST 2.0 and capital flows collectively shape the trajectory of the
-                country’s development, especially in the vision of Viksit Bharat 2047.
+                The International Conference on Innovative Business Practices aims to provide an interdisciplinary academic and professional platform for researchers, academicians, industry experts, policymakers, entrepreneurs, research scholars and students from India and abroad to deliberate on emerging trends, innovative strategies and contemporary developments in the field of business and management.
               </p>
               <p>
-                Against this backdrop, the proposed seminar “INNOBUS 2027- International Conference on Innovative Business Practices”
-                seeks to bring together academicians, policymakers, tax experts, industry
-                practitioners, and research scholars to critically evaluate the future of
-                India’s taxation ecosystem and its interaction with capital flow patterns.
+                The conference seeks to encourage the exchange of knowledge, research findings, practical experiences and innovative ideas concerning the application of emerging technologies, financial innovations, sustainable business models, entrepreneurship, digital marketing, human resource transformation, corporate governance, international trade, business analytics and inclusive economic growth. Special emphasis will be placed on understanding how businesses can leverage technological advancements, promote environmental and social responsibility, enhance operational efficiency and respond effectively to emerging global challenges.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- About the Department (Exact text from vucommerce with interactive hover) -->
+        <!-- About the Organiser (Exact text from latest document) -->
         <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-emerald-400/30 flex flex-col justify-between">
           <div>
-            <h3 class="text-2xl font-bold font-heading text-amber-300 mb-4 flex items-center gap-2.5">
-              <i class="fa-solid fa-building-columns"></i> About the Department
-            </h3>
-            <div class="space-y-4 text-sm sm:text-base text-slate-100 leading-relaxed text-justify font-normal">
+            <div class="mb-4">
+              <h3 class="text-2xl font-bold font-heading text-amber-300 flex items-center gap-2.5">
+                <i class="fa-solid fa-building-columns"></i> About the Organiser
+              </h3>
+              <p class="text-xs text-emerald-200 font-semibold mt-1">
+                The INNOBUS 2027 is being organised by Department of Commerce, Vidyasagar University, Midnapore, West Bengal.
+              </p>
+            </div>
+
+            <div class="space-y-3.5 text-xs sm:text-sm text-slate-100 leading-relaxed text-justify font-normal">
               <p>
-                Vidyasagar University is a reputed university in the Eastern region of India which has been
-                catering to the needs of higher education since 1985. The Department of Commerce, among the
-                oldest departments in the varsity presently offers M.Com. and Ph.D. degrees. The department 
-                presently has a team of seven full-time Professors, each of whom has a Doctoral degree.
+                <strong class="text-amber-300">Motto:</strong> Established in 1985, the Department of Commerce, Vidyasagar University, has a distinguished tradition of postgraduate teaching, research and academic engagement. Guided by its motto, “One Student One Appropriate Employment,” the Department strives to develop competent professionals, responsible entrepreneurs and socially conscious citizens through quality education, research and skill-oriented learning.
               </p>
               <p>
-                The department publishes a journal, ‘Vidyasagar University Journal of Commerce’    
-                (ISSN 0973-5917) which is indexed with Citefactor.org and EBSCO. The department also 
-                takes the credit of organizing Special Lectures regularly and conducting Research
-                Methodology Workshops. This year the department is organising the 28th Annual 
-                Conference.
+                <strong class="text-amber-300">Teaching-Learning:</strong> The Department offers postgraduate and doctoral research opportunities in Commerce, with academic interests encompassing Accounting, Finance, Banking, Insurance, Taxation, Capital Markets, Corporate Governance and emerging areas of business and management. It emphasises the integration of theoretical knowledge with practical understanding, analytical skills and professional competencies.
+              </p>
+              <p>
+                <strong class="text-amber-300">Research Activities:</strong> Research is an integral part of the Department's academic activities. Faculty members have undertaken UGC- and ICSSR-sponsored research projects and contributed extensively to national and international scholarly literature. Their academic contributions include research articles in reputed journals, authored and edited books, book chapters and participation in editorial activities. The Vidyasagar University Journal of Commerce is an important part of its scholarly engagement.
+              </p>
+              <p>
+                <strong class="text-amber-300">Organisation of Academic Programmes:</strong> The Department regularly organises national and international conferences, seminars, research methodology workshops and extension lectures involving eminent academicians, researchers and industry professionals. These initiatives provide opportunities for intellectual exchange, research dissemination and exposure to contemporary developments in business and the economy.
+              </p>
+              <p>
+                <strong class="text-amber-300">Career Development:</strong> The Department attaches considerable importance to students' career development through placement initiatives, professional interactions and skill-enhancement activities. Its graduates pursue careers in academia, banking, financial services, corporate organisations, government and entrepreneurship.
+              </p>
+              <p>
+                <strong class="text-amber-300">Beyond Academic Activities:</strong> the Department encourages NSS participation, community engagement, village adoption programmes and other socially relevant initiatives. It also promotes alumni interaction and institutional collaboration.
+              </p>
+              <p>
+                <strong class="text-amber-300">Aspiration:</strong> the Department aims to strengthen industry–academia partnerships, interdisciplinary research, international collaborations, digital and financial literacy, entrepreneurship and sustainable development. Through its commitment to academic excellence, research innovation and societal engagement, the Department aspires to contribute meaningfully to inclusive economic growth and nation-building.
               </p>
             </div>
           </div>
 
-          <!-- Official Journal Link -->
-          <div class="mt-6 pt-4 border-t border-emerald-500/30 flex items-center justify-between">
-            <span class="text-xs font-semibold text-emerald-200">
-              <i class="fa-solid fa-book-open mr-1"></i> Vidyasagar University Journal of Commerce
-            </span>
-            <a href="http://ir.vidyasagar.ac.in/jspui/handle/123456789/90" target="_blank" rel="noopener noreferrer" 
-               class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 transition transform hover:-translate-y-0.5 shadow-md">
-              Journal Details &rarr;
+          <!-- Document Profile Citations -->
+          <div class="mt-6 pt-4 border-t border-emerald-500/30 text-[11px] text-emerald-200 flex flex-wrap items-center justify-between gap-3">
+            <a href="https://www.vidyasagar.ac.in/ArticlePage/Dept_Article/13?M=0&amp;T=D&amp;utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 hover:underline inline-flex items-center gap-1.5 transition-colors">
+              <i class="fa-solid fa-link text-amber-400"></i>
+              <span>Department of Commerce – Department Profile, Vidyasagar University.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-75"></i>
+            </a>
+            <a href="https://www.vidyasagar.ac.in/ArticlePage/Dept_Faculty?M=9998&amp;ID=13&amp;T=D" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 hover:underline inline-flex items-center gap-1.5 transition-colors">
+              <i class="fa-solid fa-link text-amber-400"></i>
+              <span>Faculty Information System – Commerce.</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-75"></i>
             </a>
           </div>
         </div>
@@ -391,15 +432,38 @@
 
     <!-- Section Wave Divider transitioning to #best-paper -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#78350F" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-participants" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M0 20 L20 0 L40 20 L20 40 Z" fill="none" stroke="#FBBF24" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-participants)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 4. SECTION: TARGET PARTICIPANTS - Color: Warm Amber & Terracotta ==================== -->
-  <section id="best-paper" class="bg-[#78350F] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="best-paper" class="relative overflow-hidden bg-[#78350F] text-white pt-8 pb-0">
+
+    <!-- Transparent Diamond Weave Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-participants" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M0 20 L20 0 L40 20 L20 40 Z" fill="none" stroke="#FBBF24" stroke-width="0.8" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-participants)" />
+    </svg>
+
+    <!-- Drifting Warm Amber Glow Orbs -->
+    <div class="orb w-72 h-72 -right-16 -top-10 bg-amber-400/20" aria-hidden="true"></div>
+    <div class="orb w-64 h-64 -left-12 bottom-10 bg-orange-500/15" style="animation-delay: -7s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-amber-950/80 border border-amber-400/40 text-amber-200">
@@ -413,7 +477,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         
-        <!-- Left: Text (Exact text from vucommerce with interactive hover) -->
+        <!-- Left: Text (Exact text with interactive hover) -->
         <div class="lg:col-span-7">
           <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-amber-400/30 shadow-xl">
             <p class="text-lg sm:text-xl lg:text-2xl font-medium text-slate-100 leading-relaxed">
@@ -435,17 +499,40 @@
 
     <!-- Section Wave Divider transitioning to #theme -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#3B0764" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-theme" width="34" height="34" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="white" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-theme)" />
       </svg>
     </div>
   </section>
 
-  <!-- ==================== 5. SECTION: SUB-THEMES (CALL FOR PAPERS) - Color: Electric Violet & Royal Purple ==================== -->
-  <section id="theme" class="bg-[#3B0764] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== 5. SECTION: SUB-THEMES (CALL FOR PAPERS) - Color: Electric Violet & Royal Purple (Exact 5 Sub-themes from document) ==================== -->
+  <section id="theme" class="relative overflow-hidden bg-[#3B0764] text-white pt-8 pb-0">
+
+    <!-- Transparent Polka Dot Matrix Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-theme" width="34" height="34" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.5" fill="white" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-theme)" />
+    </svg>
+
+    <!-- Drifting Electric Purple & Fuchsia Orbs -->
+    <div class="orb w-80 h-80 -left-20 top-20 bg-purple-500/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 right-[-60px] bottom-32 bg-pink-500/15" style="animation-delay: -6s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center mb-8">
+      <div class="text-center mb-10">
         <span class="section-heading-badge bg-purple-950/80 border border-purple-400/40 text-purple-200">
           <i class="fa-solid fa-file-lines"></i> Research Topics
         </span>
@@ -453,135 +540,173 @@
           Call for papers
         </h2>
         <div class="w-20 h-1 bg-amber-400 mx-auto rounded-full mt-3"></div>
-        <h3 class="text-base sm:text-lg text-purple-200 mt-4 font-semibold">
-          The seminar invites original papers on the folowing sub-themes:
-        </h3>
+        <p class="text-lg sm:text-xl font-bold text-amber-300 mt-4">
+          Theme: Innovative Business Practices
+        </p>
       </div>
 
-      <!-- The exact 23 sub-themes in responsive interactive cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <!-- 5 Sub-themes from the latest document (Directly visible with interactive topic items) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Corporate Governance and Ethical Responsibility</h5>
+        <!-- Sub-theme 1 -->
+        <div class="glass-box card-interactive p-6 rounded-3xl border border-purple-400/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center text-xs shadow-md shrink-0">1</span>
+              <h3 class="text-lg sm:text-xl font-bold text-amber-300">
+                Sub-theme 1: Digital Transformation and Technological Innovation
+              </h3>
+            </div>
+            <ul class="space-y-1 text-xs sm:text-sm text-slate-100 pl-2">
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Artificial Intelligence in Business</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>FinTech, Digital Payments and Financial Inclusion</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Accounting, Finance and Business Analytics</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>GST and Digital Auditing</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Supply Chain Innovation and Resilience</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">CSR Reporting, Disclosure, and Transparenc</h5>
+        <!-- Sub-theme 2 -->
+        <div class="glass-box card-interactive p-6 rounded-3xl border border-purple-400/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center text-xs shadow-md shrink-0">2</span>
+              <h3 class="text-lg sm:text-xl font-bold text-amber-300">
+                Sub-theme 2: Corporate Finance, Governance and Financial Markets
+              </h3>
+            </div>
+            <ul class="space-y-1 text-xs sm:text-sm text-slate-100 pl-2">
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Corporate Financial Strategy</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Corporate Governance and Business Ethics</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Risk Management and Strategic Financial Management</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Capital Markets and Investor Behaviour</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Banking Innovation, Asset Quality and Risk Management</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Management Accounting and Strategic Cost Management</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">CSR and Sustainable Development Goals (SDGs)</h5>
+        <!-- Sub-theme 3 -->
+        <div class="glass-box card-interactive p-6 rounded-3xl border border-purple-400/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center text-xs shadow-md shrink-0">3</span>
+              <h3 class="text-lg sm:text-xl font-bold text-amber-300">
+                Sub-theme 3: Sustainability, Inclusion and Entrepreneurship
+              </h3>
+            </div>
+            <ul class="space-y-1 text-xs sm:text-sm text-slate-100 pl-2">
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>ESG, CSR and Sustainable Finance</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Inclusive Business Models and Socio-Economic Transformation</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Rural and Women-led Entrepreneurship</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Social Entrepreneurship, Inclusive Growth and Community Development</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Green CSR and Circular Economy Initiatives</h5>
+        <!-- Sub-theme 4 -->
+        <div class="glass-box card-interactive p-6 rounded-3xl border border-purple-400/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center text-xs shadow-md shrink-0">4</span>
+              <h3 class="text-lg sm:text-xl font-bold text-amber-300">
+                Sub-theme 4: Accounting, Regulatory Framework and Emerging Business Practices
+              </h3>
+            </div>
+            <ul class="space-y-1 text-xs sm:text-sm text-slate-100 pl-2">
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Auditing, Taxation and Regulatory Compliance</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Accounting and Financial Reporting Innovations</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Emerging Business Models and Contemporary Management Practices</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Global Business and International Trade</span>
+              </li>
+              <li class="subtheme-item flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-amber-400 mt-0.5 shrink-0 text-xs"></i>
+                <span>Any other topics within the scope of the conference theme</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Sustainable Finance and ESG Investing</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Green Finance and Climate Risk Management</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Banking Sector Reforms and Financial Stability</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">FinTech Innovations and the Future of Financial Services</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Digital Payments, Blockchain, and Cryptocurrencies</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Artificial Intelligence and Big Data in Finance</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Financial Inclusion and Microfinance</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Financial Literacy and Consumer Protection</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Public Finance, Fiscal Policy, and Economic Development</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Evaluation of Tax Structure</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Structural Shifts in Consumption Patterns Post-GST</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">GST Reforms and Impact on MSMEs, Start-ups, and Entrepreneurship</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">GST Reforms and Impact on Rural and Urban Livelihoods and Employment</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Law and GST: Legal and Judicial Perspectives</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">GST’s Regional Impact on Local Industries and Revenue Models</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">Sectoral Analysis After GST Reforms</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">GST Reforms, Digitalisation, Compliance, and Ease of Doing Business</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">GST Reforms and Social and Cultural Impact</h5>
-        </div>
-
-        <div class="subtheme-card glass-box p-4 rounded-2xl border border-purple-400/30 flex items-center gap-3 sm:col-span-2 lg:col-span-1">
-          <i class="fa-solid fa-chevron-right text-amber-400 text-xs flex-shrink-0"></i>
-          <h5 class="text-sm font-semibold text-slate-100">GST Reforms, Revenue, and Fiscal Policy</h5>
+        <!-- Sub-theme 5: Online Presentation (Full width on md screens) -->
+        <div class="md:col-span-2 glass-box card-interactive p-6 rounded-3xl border border-purple-400/30 flex flex-col justify-between bg-purple-950/40">
+          <div>
+            <div class="flex items-center gap-2.5 mb-2">
+              <span class="w-8 h-8 rounded-full bg-emerald-400 text-slate-950 font-bold flex items-center justify-center text-xs shadow-md shrink-0">5</span>
+              <h3 class="text-lg sm:text-xl font-bold text-emerald-300">
+                Sub-theme 5: Emerging Research Perspectives in Commerce, Finance and Management (Online Presentation)
+              </h3>
+            </div>
+            <div class="subtheme-item pl-10 mt-1">
+              <p class="text-xs sm:text-sm text-slate-200 font-medium">
+                Accommodates Papers from all four above groups.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <!-- Concluding Note (Exact from vucommerce) -->
-      <div class="max-w-4xl mx-auto mt-8 p-4 rounded-2xl bg-purple-950/70 border border-purple-400/30 text-center card-interactive">
-        <p class="text-xs sm:text-sm text-purple-200">
-          This is only an indicative list. Any paper that does not fall under the subject mentioned above but is related to the conference theme is welcome.
+      <!-- Notes Callout (Exact from document) -->
+      <div class="max-w-4xl mx-auto mt-8 p-5 rounded-2xl bg-purple-950/80 border border-amber-400/50 text-center card-interactive">
+        <p class="text-xs sm:text-sm text-amber-200 font-semibold leading-relaxed">
+          <strong class="text-white">Notes:</strong> Researchers may submit papers under any of the identified sub-themes for presentation in either offline or online mode. A separate presentation track will be organised to facilitate participation by researchers.
         </p>
       </div>
 
@@ -589,15 +714,39 @@
 
     <!-- Section Wave Divider transitioning to #deadline -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#881337" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-dates" width="44" height="44" patternUnits="userSpaceOnUse">
+            <path d="M22 0V44M0 22H44" fill="none" stroke="white" stroke-width="0.9" stroke-dasharray="3,3" /><circle cx="22" cy="22" r="1.5" fill="#FDA4AF" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-dates)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 6. SECTION: IMPORTANT DEADLINES - Color: Vibrant Crimson & Rose ==================== -->
-  <section id="deadline" class="bg-[#881337] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="deadline" class="relative overflow-hidden bg-[#881337] text-white pt-8 pb-0">
+
+    <!-- Transparent Blueprint Cross-Grid Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-dates" width="44" height="44" patternUnits="userSpaceOnUse">
+          <path d="M22 0V44M0 22H44" fill="none" stroke="white" stroke-width="0.75" stroke-dasharray="3,3" />
+          <circle cx="22" cy="22" r="1.5" fill="#FDA4AF" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-dates)" />
+    </svg>
+
+    <!-- Drifting Crimson & Rose Orbs -->
+    <div class="orb w-80 h-80 -right-20 top-10 bg-rose-500/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 -left-20 bottom-24 bg-red-600/15" style="animation-delay: -8s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-rose-950/80 border border-rose-400/40 text-rose-200">
@@ -658,15 +807,38 @@
 
     <!-- Section Wave Divider transitioning to #schedule -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#0E7490" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-schedule" width="60" height="30" patternUnits="userSpaceOnUse">
+            <path d="M0 15 Q 15 0, 30 15 T 60 15" fill="none" stroke="white" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-schedule)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 7. SECTION: PAPER SUBMISSION - Color: Deep Cyan & Teal ==================== -->
-  <section id="schedule" class="bg-[#0E7490] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="schedule" class="relative overflow-hidden bg-[#0E7490] text-white pt-8 pb-0">
+
+    <!-- Transparent Contour Wave Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-schedule" width="60" height="30" patternUnits="userSpaceOnUse">
+          <path d="M0 15 Q 15 0, 30 15 T 60 15" fill="none" stroke="white" stroke-width="0.8" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-schedule)" />
+    </svg>
+
+    <!-- Drifting Cyan & Aqua Orbs -->
+    <div class="orb w-80 h-80 -left-20 top-16 bg-cyan-400/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 right-[-50px] bottom-20 bg-teal-300/15" style="animation-delay: -5s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-cyan-950/80 border border-cyan-400/40 text-cyan-200">
@@ -687,7 +859,7 @@
           <div class="space-y-5 text-sm sm:text-base text-slate-100 leading-relaxed">
             <p>
               For any kind of correspondence relating to the conference (including conference paper submission), email should be sent to 
-              <a href="mailto:fitgvib2047@gmail.com" class="font-bold text-amber-300 hover:underline"><em>fitgvib2047@gmail.com</em></a>
+              <a href="mailto:innobus2027@mail.vidyasagar.ac.in" class="font-bold text-amber-300 hover:underline"><em>innobus2027@mail.vidyasagar.ac.in</em></a>
             </p>
 
             <p>
@@ -701,6 +873,10 @@
             <div class="p-4 rounded-2xl bg-cyan-950/60 border border-cyan-300/30">
               <strong class="text-amber-300 font-bold">Note:</strong> Not more than two papers can be submitted by any author (either singly or jointly).
             </div>
+
+            <div class="p-4 rounded-2xl bg-cyan-950/60 border border-amber-400/30 text-xs sm:text-sm">
+              <strong class="text-amber-300">Presentation Mode:</strong> Researchers may submit papers under any of the identified sub-themes for presentation in either offline or online mode. A separate presentation track will be organised to facilitate participation by researchers.
+            </div>
           </div>
         </div>
       </div>
@@ -709,15 +885,38 @@
 
     <!-- Section Wave Divider transitioning to #register -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#1E1B4B" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-register" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M25 0 L50 14.4 L50 43.3 L25 57.7 L0 43.3 L0 14.4 Z M25 0 V28.8 M0 14.4 L25 28.8 L50 14.4" fill="none" stroke="white" stroke-width="0.9" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-register)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 8. SECTION: REGISTRATION DETAILS - Color: Royal Indigo & Slate Navy ==================== -->
-  <section id="register" class="bg-[#1E1B4B] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="register" class="relative overflow-hidden bg-[#1E1B4B] text-white pt-8 pb-0">
+
+    <!-- Transparent Isometric Cube Grid Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-register" width="50" height="50" patternUnits="userSpaceOnUse">
+          <path d="M25 0 L50 14.4 L50 43.3 L25 57.7 L0 43.3 L0 14.4 Z M25 0 V28.8 M0 14.4 L25 28.8 L50 14.4" fill="none" stroke="white" stroke-width="0.75" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-register)" />
+    </svg>
+
+    <!-- Drifting Indigo & Electric Blue Orbs -->
+    <div class="orb w-80 h-80 -right-20 top-20 bg-indigo-500/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 -left-20 bottom-32 bg-blue-600/15" style="animation-delay: -7s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-indigo-950/80 border border-indigo-400/40 text-indigo-200">
@@ -729,7 +928,7 @@
         <div class="w-20 h-1 bg-amber-400 mx-auto rounded-full mt-3"></div>
       </div>
 
-      <!-- Registration Table (Exact from vucommerce + user modifications with interactive hover) -->
+      <!-- Registration Table (Exact fees with interactive hover) -->
       <div class="max-w-4xl mx-auto">
         <div class="glass-box card-interactive rounded-3xl border border-indigo-400/30 overflow-hidden shadow-2xl mb-8">
           <div class="overflow-x-auto">
@@ -772,7 +971,7 @@
           </div>
         </div>
 
-        <!-- Registration CTA & Payment Requirement Notice (Exact from vucommerce) -->
+        <!-- Registration CTA & Payment Requirement Notice (Exact from document) -->
         <div class="text-center mb-10 flex flex-col items-center justify-center">
           <div class="inline-flex items-center gap-3">
             <span class="text-amber-300 font-bold text-base sm:text-lg">
@@ -788,7 +987,7 @@
           </p>
         </div>
 
-        <!-- Accommodation (Exact text from vucommerce with interactive hover) -->
+        <!-- Accommodation (Exact text from document with interactive hover) -->
         <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-indigo-400/30 shadow-xl">
           <h3 class="text-xl sm:text-2xl font-bold font-heading text-amber-300 mb-3 flex items-center gap-2">
             <i class="fa-solid fa-bed"></i> Accommodation
@@ -804,15 +1003,39 @@
 
     <!-- Section Wave Divider transitioning to #payment -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#065F46" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-payment" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M0 24 H36 V48 M24 0 V36 H48" fill="none" stroke="white" stroke-width="0.9" /><circle cx="36" cy="36" r="2" fill="#F59E0B" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-payment)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 9. SECTION: PAYMENT - Color: Vibrant Emerald ==================== -->
-  <section id="payment" class="bg-[#065F46] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="payment" class="relative overflow-hidden bg-[#065F46] text-white pt-8 pb-0">
+
+    <!-- Transparent Circuit Track Grid Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-payment" width="48" height="48" patternUnits="userSpaceOnUse">
+          <path d="M0 24 H36 V48 M24 0 V36 H48" fill="none" stroke="white" stroke-width="0.75" />
+          <circle cx="36" cy="36" r="2" fill="#F59E0B" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-payment)" />
+    </svg>
+
+    <!-- Drifting Emerald & Gold Glow Orbs -->
+    <div class="orb w-80 h-80 -left-20 top-16 bg-emerald-400/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 right-[-50px] bottom-24 bg-amber-400/15" style="animation-delay: -6s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-emerald-950/80 border border-emerald-400/40 text-emerald-200">
@@ -826,7 +1049,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         
-        <!-- Left: Payment details (Exact text from vucommerce with interactive hover) -->
+        <!-- Left: Payment details (Exact text with interactive hover) -->
         <div class="lg:col-span-7">
           <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-emerald-400/30 shadow-2xl">
             <h3 class="text-xl font-bold font-heading text-amber-300 mb-3">
@@ -878,7 +1101,7 @@
           </div>
         </div>
 
-        <!-- Right: Official QR Code Box (Exact from vucommerce with interactive hover) -->
+        <!-- Right: Official QR Code Box (with interactive hover) -->
         <div class="lg:col-span-5 flex flex-col items-center justify-center">
           <div class="glass-box card-interactive p-6 rounded-3xl border border-emerald-400/30 text-center cursor-pointer shadow-2xl" data-bs-toggle="modal" data-bs-target="#paymentModal">
             <p class="text-sm font-bold text-amber-300 mb-3 flex items-center justify-center gap-2">
@@ -899,54 +1122,83 @@
 
     <!-- Section Wave Divider transitioning to #contact -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#1E3A8A" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-contact" width="54" height="54" patternUnits="userSpaceOnUse">
+            <circle cx="27" cy="27" r="2" fill="white" /><line x1="0" y1="27" x2="54" y2="27" stroke="white" stroke-width="0.75" stroke-dasharray="4,4" /><line x1="27" y1="0" x2="27" y2="54" stroke="white" stroke-width="0.75" stroke-dasharray="4,4" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-contact)" />
       </svg>
     </div>
   </section>
 
-  <!-- ==================== 10. SECTION: CONTACT DETAILS - Color: Deep Cobalt Blue ==================== -->
-  <section id="contact" class="bg-[#1E3A8A] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== 10. SECTION: CONTACT PERSONS - Color: Deep Cobalt Blue (Exact Contact Persons from latest document) ==================== -->
+  <section id="contact" class="relative overflow-hidden bg-[#1E3A8A] text-white pt-8 pb-0">
+
+    <!-- Transparent Connected Communication Nodes Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-contact" width="54" height="54" patternUnits="userSpaceOnUse">
+          <circle cx="27" cy="27" r="2" fill="white" />
+          <line x1="0" y1="27" x2="54" y2="27" stroke="white" stroke-width="0.5" stroke-dasharray="4,4" />
+          <line x1="27" y1="0" x2="27" y2="54" stroke="white" stroke-width="0.5" stroke-dasharray="4,4" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-contact)" />
+    </svg>
+
+    <!-- Drifting Sapphire & Sky Blue Orbs -->
+    <div class="orb w-80 h-80 -right-20 top-16 bg-blue-500/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 -left-20 bottom-24 bg-cyan-400/15" style="animation-delay: -7s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-blue-950/80 border border-blue-400/40 text-blue-200">
           <i class="fa-solid fa-address-book"></i> Connect with Us
         </span>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white">
-          Contact Details
+          Contact Persons
         </h2>
         <div class="w-20 h-1 bg-amber-400 mx-auto rounded-full mt-3"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         
-        <!-- Left: Secretaries list (Exact from vucommerce with interactive hover) -->
+        <!-- Left: Contact Persons (Exact from latest document with interactive hover) -->
         <div class="lg:col-span-7">
           <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-blue-400/30 shadow-2xl space-y-6">
             
-            <!-- Dr. Brajaballav Pal -->
+            <!-- Kalpataru Bandopadhyay -->
             <div class="p-4 rounded-2xl bg-blue-950/70 border border-blue-400/20 card-interactive">
-              <h3 class="text-lg font-bold text-white">Dr. Brajaballav Pal</h3>
-              <p class="text-xs text-blue-200 font-semibold">Professor</p>
-              <p class="text-xs text-slate-200">Department of Commerce, Vidyasagar University</p>
-              <p class="text-xs text-amber-300 font-medium">Jt. Org. Secretary, INNOBUS - 2027</p>
+              <h3 class="text-lg font-bold text-white">Kalpataru Bandopadhyay</h3>
+              <p class="text-xs text-blue-200 font-semibold">Professor, Department of Commerce, Vidyasagar University</p>
+              <p class="text-xs text-amber-300 font-medium">&amp; Jt. Secretary, INNOBUS 2027</p>
               <div class="mt-2 pt-2 border-t border-blue-800/60 flex flex-wrap gap-4 text-xs">
-                <span><i class="fa-solid fa-phone text-amber-400 mr-1"></i> M: <a href="tel:8900163078" class="font-mono hover:underline">8900163078</a></span>
-                <span><i class="fa-regular fa-envelope text-amber-400 mr-1"></i> Email: <em><a href="mailto:pal.brajaballav1@gmail.com" class="hover:underline">pal.brajaballav1@gmail.com</a></em></span>
+                <span><i class="fa-solid fa-phone text-amber-400 mr-1"></i> <a href="tel:9434665183" class="font-mono font-bold hover:underline">9434665183</a></span>
               </div>
             </div>
 
-            <!-- Dr. Tarak Nath Sahu -->
+            <!-- Tagar L. Khan -->
             <div class="p-4 rounded-2xl bg-blue-950/70 border border-blue-400/20 card-interactive">
-              <h3 class="text-lg font-bold text-white">Dr. Tarak Nath Sahu</h3>
-              <p class="text-xs text-blue-200 font-semibold">Professor</p>
-              <p class="text-xs text-slate-200">Department of Commerce, Vidyasagar University</p>
-              <p class="text-xs text-amber-300 font-medium">Jt. Org. Secretary, INNOBUS - 2027</p>
+              <h3 class="text-lg font-bold text-white">Tagar L. Khan</h3>
+              <p class="text-xs text-blue-200 font-semibold">Professor, Department of Commerce, Vidyasagar University</p>
+              <p class="text-xs text-amber-300 font-medium">&amp; Jt. Secretary, INNOBUS 2027</p>
               <div class="mt-2 pt-2 border-t border-blue-800/60 flex flex-wrap gap-4 text-xs">
-                <span><i class="fa-solid fa-phone text-amber-400 mr-1"></i> M: <a href="tel:9474971927" class="font-mono hover:underline">9474971927</a></span>
-                <span><i class="fa-regular fa-envelope text-amber-400 mr-1"></i> Email: <em><a href="mailto:taraknathsahu1@mail.vidyasagar.ac.in" class="hover:underline">taraknathsahu1@mail.vidyasagar.ac.in</a></em></span>
+                <span><i class="fa-solid fa-phone text-amber-400 mr-1"></i> <a href="tel:8918498027" class="font-mono font-bold hover:underline">8918498027</a></span>
               </div>
+            </div>
+
+            <!-- Official Conference Email -->
+            <div class="p-3.5 rounded-2xl bg-indigo-950/80 border border-amber-400/30 text-xs sm:text-sm">
+              <span class="text-slate-300 font-semibold">Email: </span>
+              <a href="mailto:innobus2027@mail.vidyasagar.ac.in" class="text-amber-300 font-bold hover:underline font-mono">
+                innobus2027@mail.vidyasagar.ac.in
+              </a>
             </div>
 
           </div>
@@ -965,15 +1217,39 @@
 
     <!-- Section Wave Divider transitioning to #resource-persons -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#581C87" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-speakers" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M24 18 L24 30 M18 24 L30 24" stroke="white" stroke-width="1" /><circle cx="24" cy="24" r="1.5" fill="#F59E0B" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-speakers)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 11. SECTION: INTERNATIONAL RESOURCE PERSONS - Color: Deep Purple ==================== -->
-  <section id="resource-persons" class="bg-[#581C87] text-white pt-8 pb-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="resource-persons" class="relative overflow-hidden bg-[#581C87] text-white pt-8 pb-0">
+
+    <!-- Transparent Star Constellation Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-speakers" width="48" height="48" patternUnits="userSpaceOnUse">
+          <path d="M24 18 L24 30 M18 24 L30 24" stroke="white" stroke-width="0.75" />
+          <circle cx="24" cy="24" r="1.5" fill="#F59E0B" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-speakers)" />
+    </svg>
+
+    <!-- Drifting Imperial Plum & Lavender Orbs -->
+    <div class="orb w-80 h-80 -left-20 top-16 bg-purple-600/20" aria-hidden="true"></div>
+    <div class="orb w-72 h-72 right-[-50px] bottom-24 bg-fuchsia-500/15" style="animation-delay: -6s;" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-10">
         <span class="section-heading-badge bg-purple-950/80 border border-purple-400/40 text-purple-200">
@@ -987,7 +1263,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
         
-        <!-- Left: Speakers Cards (Exact from vucommerce with interactive hover) -->
+        <!-- Left: Speakers Cards (with interactive hover) -->
         <div class="lg:col-span-7">
           <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-purple-400/30 shadow-2xl space-y-6">
             
@@ -1021,17 +1297,39 @@
 
     <!-- Section Wave Divider transitioning to Footer -->
     <div class="section-wave mt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="#000000" fill-opacity="1" d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-pattern opacity-[0.10]" aria-hidden="true">
+        <defs>
+          <pattern id="wp-footer" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0H0V40" fill="none" stroke="white" stroke-width="0.9" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#wp-footer)" />
       </svg>
     </div>
   </section>
 
   <!-- ==================== 12. FOOTER - Color: Obsidian Black ==================== -->
-  <footer class="bg-black text-white pt-6 pb-12 border-t border-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="relative overflow-hidden bg-black text-white pt-6 pb-12 border-t border-slate-900">
+
+    <!-- Transparent Blueprint Grid Pattern -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.11] pointer-events-none select-none z-0" aria-hidden="true">
+      <defs>
+        <pattern id="grid-footer" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M40 0H0V40" fill="none" stroke="white" stroke-width="0.75" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-footer)" />
+    </svg>
+
+    <!-- Drifting Amber Glow Orb -->
+    <div class="orb w-80 h-80 -right-20 top-10 bg-amber-500/15" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Footer Title (Exact from vucommerce) -->
+      <!-- Footer Title -->
       <div class="mb-8 pb-4 border-b border-slate-800 flex items-center justify-between flex-wrap gap-4">
         <h5 class="text-xl sm:text-2xl font-black font-heading text-amber-400">
           INNOBUS - 2027
@@ -1041,7 +1339,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         
-        <!-- Left: Exact Navigation Links from vucommerce footer -->
+        <!-- Left: Exact Navigation Links from footer -->
         <div>
           <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
             <li>

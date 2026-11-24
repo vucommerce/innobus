@@ -5,6 +5,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initCountdown();
+  initParticles();
   initCarouselControls();
   initMobileMenu();
   initCopyButtons();
@@ -12,6 +14,100 @@ document.addEventListener('DOMContentLoaded', () => {
   initPaymentModal();
   initBackToTop();
 });
+
+/* 0. Dynamic Faint Particle Constellation Network (Inspired by ICSTS 2026) */
+function initParticles() {
+  const c = document.getElementById('particles-hero');
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  let W, H, pts = [];
+
+  const resize = () => {
+    W = c.width = c.offsetWidth;
+    H = c.height = c.offsetHeight;
+    const n = Math.min(75, Math.floor(W / 18));
+    pts = Array.from({ length: n }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      r: Math.random() * 1.5 + 0.6
+    }));
+  };
+
+  const draw = () => {
+    ctx.clearRect(0, 0, W, H);
+    // Draw drifting subtle golden particles
+    pts.forEach(p => {
+      p.x = (p.x + p.vx + W) % W;
+      p.y = (p.y + p.vy + H) % H;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(245, 158, 11, 0.65)';
+      ctx.fill();
+    });
+
+    // Draw dynamic faint connecting lines between nearby points
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const a = pts[i], b = pts[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < 125 * 125) {
+          ctx.strokeStyle = `rgba(255, 255, 255, ${0.11 * (1 - d2 / 15625)})`;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  };
+
+  window.addEventListener('resize', resize);
+  resize();
+  draw();
+}
+
+/* 0. Live Countdown Timer to March 25, 2027 */
+function initCountdown() {
+  const daysEl = document.getElementById('cd-days');
+  const hoursEl = document.getElementById('cd-hours');
+  const minutesEl = document.getElementById('cd-minutes');
+  const secondsEl = document.getElementById('cd-seconds');
+
+  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+  // Conference Date: March 25, 2027, 09:30:00 AM IST
+  const targetDate = new Date('2027-03-25T09:30:00+05:30').getTime();
+
+  function updateCountdown() {
+    const now = Date.now();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      daysEl.textContent = '00';
+      hoursEl.textContent = '00';
+      minutesEl.textContent = '00';
+      secondsEl.textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
 
 /* 1. Horizontal Image Carousel Controls */
 function initCarouselControls() {
