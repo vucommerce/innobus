@@ -947,16 +947,6 @@
               </thead>
               <tbody class="divide-y divide-white/10 text-slate-100">
                 <tr>
-                  <td class="font-semibold text-white">Department PG Students</td>
-                  <td class="font-bold text-amber-300">Rs. 500</td>
-                  <td class="font-bold text-amber-300">Rs. 500</td>
-                </tr>
-                <tr>
-                  <td class="font-semibold text-white">University on going Research Scholar & PG Students</td>
-                  <td class="font-bold text-amber-300">Rs. 1000</td>
-                  <td class="font-bold text-amber-300">Rs. 1000</td>
-                </tr>
-                <tr>
                   <td class="font-semibold text-white">Academicians and Research Scholars</td>
                   <td class="font-bold text-amber-300">Rs. 1500</td>
                   <td class="font-bold text-amber-300">Rs. 2000</td>
@@ -992,14 +982,75 @@
           </p>
         </div>
 
-        <!-- Accommodation (Exact text from document with interactive hover) -->
-        <div class="glass-box card-interactive p-6 sm:p-8 rounded-3xl border border-indigo-400/30 shadow-xl">
-          <h3 class="text-xl sm:text-2xl font-bold font-heading text-amber-300 mb-3 flex items-center gap-2">
-            <i class="fa-solid fa-bed"></i> Accommodation
-          </h3>
-          <p class="text-sm sm:text-base text-slate-100 leading-relaxed">
-            Arrangement for accommodation can be made for a limited number of participants on a first-come, first-served basis on payment of Rs. 500 per bed, for which prior intimation is required at least ten days before the conference.
-          </p>
+        <!-- Accommodation (University Arrangement + Self-Booking Hotel Option) -->
+        <div class="space-y-6">
+          
+          <!-- University Accommodation Notice -->
+          <div class="glass-box card-interactive p-6 sm:p-7 rounded-3xl border border-indigo-400/30 shadow-xl">
+            <h3 class="text-xl sm:text-2xl font-bold font-heading text-amber-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-bed"></i> University Accommodation
+            </h3>
+            <p class="text-sm sm:text-base text-slate-100 leading-relaxed">
+              Arrangement for accommodation can be made for a limited number of participants on a first-come, first-served basis on payment of <strong class="text-amber-300">Rs. 500 per bed</strong>, for which prior intimation is required at least ten days before the conference.
+            </p>
+          </div>
+
+          <!-- Self-Booking Hotel Card: Hotel Asmit Regency -->
+          <div class="glass-box card-interactive p-6 sm:p-7 rounded-3xl border border-amber-400/40 shadow-xl bg-gradient-to-br from-indigo-950/70 via-slate-900/80 to-amber-950/30">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+              
+              <!-- Hotel Photo -->
+              <div class="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-white/10 group">
+                <img src="assets/images/asmit_regency_hotel.jpg" alt="Hotel Asmit Regency Midnapore" class="w-full h-48 sm:h-52 object-cover transform group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md flex items-center gap-1.5">
+                  <i class="fa-solid fa-star text-xs"></i> Recommended Stay
+                </span>
+                <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                  <i class="fa-solid fa-location-dot text-amber-400"></i> Midnapore, West Bengal
+                </span>
+              </div>
+
+              <!-- Hotel Info & Action Button -->
+              <div class="md:col-span-7 flex flex-col justify-between">
+                <div>
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-900/60 border border-indigo-400/30 text-indigo-200 text-xs font-bold uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-hotel text-amber-400"></i> Self-Booking Option
+                  </div>
+                  <h4 class="text-xl sm:text-2xl font-bold font-heading text-white mb-2">
+                    Hotel Asmit Regency
+                  </h4>
+                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                    Participants who prefer independent hotel accommodation can book directly. Located conveniently in Midnapore near Jagannath Mandir Chowk, offering comfortable AC/Non-AC rooms, on-site restaurant, and high-speed Wi-Fi.
+                  </p>
+                  
+                  <!-- Feature Badges -->
+                  <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1.5">
+                      <i class="fa-solid fa-wifi text-amber-400"></i> Free Wi-Fi
+                    </span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1.5">
+                      <i class="fa-solid fa-utensils text-amber-400"></i> Multi-Cuisine Dining
+                    </span>
+                    <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1.5">
+                      <i class="fa-solid fa-square-parking text-amber-400"></i> Parking Available
+                    </span>
+                  </div>
+                </div>
+
+                <div>
+                  <a href="https://asmitregencyhotel.com/" target="_blank" rel="noopener noreferrer" 
+                     class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-calendar-check"></i> Book Hotel Directly
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>
