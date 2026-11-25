@@ -70,7 +70,7 @@ function initParticles() {
   draw();
 }
 
-/* 0. Live Countdown Timer to March 25, 2027 */
+/* 0. Live Countdown Timer to 18-19th March, 2027 */
 function initCountdown() {
   const daysEl = document.getElementById('cd-days');
   const hoursEl = document.getElementById('cd-hours');
@@ -79,8 +79,8 @@ function initCountdown() {
 
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-  // Conference Date: March 25, 2027, 09:30:00 AM IST
-  const targetDate = new Date('2027-03-25T09:30:00+05:30').getTime();
+  // Conference Date: 18-19th March, 2027 (Starts March 18, 2027, 09:30:00 AM IST)
+  const targetDate = new Date('2027-03-18T09:30:00+05:30').getTime();
 
   function updateCountdown() {
     const now = Date.now();
