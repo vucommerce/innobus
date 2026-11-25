@@ -934,7 +934,7 @@
       </div>
 
       <!-- Registration Table (Exact fees with interactive hover) -->
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         <div class="glass-box card-interactive rounded-3xl border border-indigo-400/30 overflow-hidden shadow-2xl mb-8">
           <div class="overflow-x-auto">
             <table class="w-full reg-table">
@@ -982,8 +982,8 @@
           </p>
         </div>
 
-        <!-- Accommodation (University Arrangement + Self-Booking Hotel Option) -->
-        <div class="space-y-6">
+        <!-- Accommodation (University Arrangement + Self-Booking Hotel Directory) -->
+        <div class="mt-8 space-y-6">
           
           <!-- University Accommodation Notice -->
           <div class="glass-box card-interactive p-6 sm:p-7 rounded-3xl border border-indigo-400/30 shadow-xl">
@@ -995,60 +995,274 @@
             </p>
           </div>
 
-          <!-- Self-Booking Hotel Card: Hotel Asmit Regency -->
-          <div class="glass-box card-interactive p-6 sm:p-7 rounded-3xl border border-amber-400/40 shadow-xl bg-gradient-to-br from-indigo-950/70 via-slate-900/80 to-amber-950/30">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-              
-              <!-- Hotel Photo -->
-              <div class="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-white/10 group">
-                <img src="assets/images/asmit_regency_hotel.jpg" alt="Hotel Asmit Regency Midnapore" class="w-full h-48 sm:h-52 object-cover transform group-hover:scale-105 transition duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md flex items-center gap-1.5">
-                  <i class="fa-solid fa-star text-xs"></i> Recommended Stay
-                </span>
-                <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
-                  <i class="fa-solid fa-location-dot text-amber-400"></i> Midnapore, West Bengal
-                </span>
-              </div>
-
-              <!-- Hotel Info & Action Button -->
-              <div class="md:col-span-7 flex flex-col justify-between">
-                <div>
-                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-900/60 border border-indigo-400/30 text-indigo-200 text-xs font-bold uppercase tracking-wider mb-2">
-                    <i class="fa-solid fa-hotel text-amber-400"></i> Self-Booking Option
-                  </div>
-                  <h4 class="text-xl sm:text-2xl font-bold font-heading text-white mb-2">
-                    Hotel Asmit Regency
-                  </h4>
-                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
-                    Participants who prefer independent hotel accommodation can book directly. Located conveniently in Midnapore near Jagannath Mandir Chowk, offering comfortable AC/Non-AC rooms, on-site restaurant, and high-speed Wi-Fi.
-                  </p>
-                  
-                  <!-- Feature Badges -->
-                  <div class="flex flex-wrap gap-2 mb-5">
-                    <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1.5">
-                      <i class="fa-solid fa-wifi text-amber-400"></i> Free Wi-Fi
-                    </span>
-                    <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1.5">
-                      <i class="fa-solid fa-utensils text-amber-400"></i> Multi-Cuisine Dining
-                    </span>
-                    <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1.5">
-                      <i class="fa-solid fa-square-parking text-amber-400"></i> Parking Available
-                    </span>
-                  </div>
-                </div>
-
-                <div>
-                  <a href="https://asmitregencyhotel.com/" target="_blank" rel="noopener noreferrer" 
-                     class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-calendar-check"></i> Book Hotel Directly
-                    <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
-                  </a>
-                </div>
-
-              </div>
-
+          <!-- Section Heading for Recommended Hotels -->
+          <div class="pt-2 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-900/60 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
+              <i class="fa-solid fa-hotel text-amber-400"></i> Self-Booking Hotel Options
             </div>
+            <h4 class="text-xl sm:text-2xl font-bold font-heading text-white">
+              Nearby Hotels &amp; Lodging in Midnapore
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">
+              Participants desiring independent hotel lodging can book rooms directly with any of the following hotels:
+            </p>
+          </div>
+
+          <!-- Hotel Directory Grid (5 Hotels) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Hotel 1: Hotel Asmit Regency -->
+            <div class="glass-box card-interactive rounded-3xl border border-amber-400/30 overflow-hidden flex flex-col justify-between shadow-xl bg-gradient-to-b from-indigo-950/70 to-slate-900/90 group">
+              <div>
+                <div class="relative h-48 overflow-hidden">
+                  <img src="assets/images/asmit_regency_hotel.jpg" alt="Hotel Asmit Regency Midnapore" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Near Jagannath Mandir
+                  </span>
+                </div>
+                <div class="p-5">
+                  <h5 class="text-lg font-bold font-heading text-white mb-1">
+                    Hotel Asmit Regency
+                  </h5>
+                  <p class="text-xs text-amber-300/90 font-medium mb-3 flex items-center gap-1">
+                    <i class="fa-solid fa-map-pin text-[10px]"></i> Mahatabpur / Jagannath Chowk, Midnapore
+                  </p>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Comfortable AC and Non-AC lodging with an on-site multi-cuisine restaurant, ideal for conference attendees.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-wifi text-amber-400 text-[10px]"></i> Free Wi-Fi
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-utensils text-amber-400 text-[10px]"></i> Restaurant
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-square-parking text-amber-400 text-[10px]"></i> Parking
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="https://asmitregencyhotel.com/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-center bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-hotel"></i> Book Hotel Directly
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hotel 2: Jack Paul Residency -->
+            <div class="glass-box card-interactive rounded-3xl border border-indigo-400/30 overflow-hidden flex flex-col justify-between shadow-xl bg-gradient-to-b from-indigo-950/70 to-slate-900/90 group">
+              <div>
+                <div class="relative h-48 overflow-hidden">
+                  <img src="assets/images/jack_paul_residency.jpg" alt="Jack Paul Residency Midnapore" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Keranitola, Midnapore
+                  </span>
+                </div>
+                <div class="p-5">
+                  <h5 class="text-lg font-bold font-heading text-white mb-1">
+                    Jack Paul Residency
+                  </h5>
+                  <p class="text-xs text-amber-300/90 font-medium mb-3 flex items-center gap-1">
+                    <i class="fa-solid fa-map-pin text-[10px]"></i> Keranitola, Midnapore, West Bengal
+                  </p>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Modern suites and deluxe rooms with multi-cuisine dining, banquet facilities, and 24-hour guest assistance.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-wifi text-amber-400 text-[10px]"></i> Free Wi-Fi
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-bell-concierge text-amber-400 text-[10px]"></i> 24h Service
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-utensils text-amber-400 text-[10px]"></i> Dining
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="https://jackpaulresidency.com/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-center bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-hotel"></i> Book Hotel Directly
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hotel 3: Hotel Light House -->
+            <div class="glass-box card-interactive rounded-3xl border border-cyan-400/30 overflow-hidden flex flex-col justify-between shadow-xl bg-gradient-to-b from-indigo-950/70 to-slate-900/90 group">
+              <div>
+                <div class="relative h-48 overflow-hidden">
+                  <img src="assets/images/hotel_light_house.jpg" alt="Hotel Light House Midnapore" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Station Road, Midnapore
+                  </span>
+                </div>
+                <div class="p-5">
+                  <h5 class="text-lg font-bold font-heading text-white mb-1">
+                    Hotel Light House
+                  </h5>
+                  <p class="text-xs text-amber-300/90 font-medium mb-3 flex items-center gap-1">
+                    <i class="fa-solid fa-map-pin text-[10px]"></i> Station Road, Golbazar, Midnapore
+                  </p>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Prime location next to Midnapore Railway Station, offering premium AC rooms, banquet hall, and round-the-clock service.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-wifi text-amber-400 text-[10px]"></i> Free Wi-Fi
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-train text-amber-400 text-[10px]"></i> Near Station
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-square-parking text-amber-400 text-[10px]"></i> Parking
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="https://hotelighthouse.com/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-center bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-hotel"></i> Book Hotel Directly
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hotel 4: The Orbit Hotel Midnapore -->
+            <div class="glass-box card-interactive rounded-3xl border border-rose-400/30 overflow-hidden flex flex-col justify-between shadow-xl bg-gradient-to-b from-indigo-950/70 to-slate-900/90 group">
+              <div>
+                <div class="relative h-48 overflow-hidden">
+                  <img src="assets/images/orbit_hotel_midnapore.jpg" alt="The Orbit Hotel Midnapore" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Midnapore Bypass / NH-60
+                  </span>
+                </div>
+                <div class="p-5">
+                  <h5 class="text-lg font-bold font-heading text-white mb-1">
+                    The Orbit Hotel
+                  </h5>
+                  <p class="text-xs text-amber-300/90 font-medium mb-3 flex items-center gap-1">
+                    <i class="fa-solid fa-map-pin text-[10px]"></i> By Chocolate Hotels, Midnapore
+                  </p>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Upscale hotel with premium furnished rooms, banquet halls, fine dining restaurant, and modern amenities.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-wifi text-amber-400 text-[10px]"></i> Free Wi-Fi
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-utensils text-amber-400 text-[10px]"></i> Fine Dining
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-square-parking text-amber-400 text-[10px]"></i> Parking
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="https://chocolatehotels.in/orbithotelsmidnapore/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-center bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-hotel"></i> Book Hotel Directly
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hotel 5: Hotel Hindusthan -->
+            <div class="glass-box card-interactive rounded-3xl border border-emerald-400/30 overflow-hidden flex flex-col justify-between shadow-xl bg-gradient-to-b from-indigo-950/70 to-slate-900/90 group">
+              <div>
+                <div class="relative h-48 overflow-hidden">
+                  <img src="assets/images/hotel_hindusthan.jpg" alt="Hotel Hindusthan Midnapore" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Keranitola Chawk
+                  </span>
+                </div>
+                <div class="p-5">
+                  <h5 class="text-lg font-bold font-heading text-white mb-1">
+                    Hotel Hindusthan
+                  </h5>
+                  <p class="text-xs text-amber-300/90 font-medium mb-3 flex items-center gap-1">
+                    <i class="fa-solid fa-map-pin text-[10px]"></i> Station Road, Keranitola, Midnapore
+                  </p>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Well-known budget hotel near Midnapore Railway Station offering AC/Non-AC rooms, on-site dining, and 24-hour service.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-wifi text-amber-400 text-[10px]"></i> Free Wi-Fi
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-bell-concierge text-amber-400 text-[10px]"></i> Room Service
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-train text-amber-400 text-[10px]"></i> Near Station
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="https://share.google/MOrFF9vc3GkaL9Vf9" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-center bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> View &amp; Book on Google
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hotel 6: Rani Shiromoni Paryatak Abas (WBTDC) -->
+            <div class="glass-box card-interactive rounded-3xl border border-teal-400/30 overflow-hidden flex flex-col justify-between shadow-xl bg-gradient-to-b from-indigo-950/70 to-slate-900/90 group">
+              <div>
+                <div class="relative h-48 overflow-hidden">
+                  <img src="assets/images/rani_shiromoni_abas.jpg" alt="Rani Shiromoni Paryatak Abas WBTDC Midnapore" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                  <span class="absolute bottom-2.5 left-3 text-xs text-slate-200 font-semibold flex items-center gap-1">
+                    <i class="fa-solid fa-location-dot text-amber-400"></i> Daak Bunglow Road
+                  </span>
+                </div>
+                <div class="p-5">
+                  <h5 class="text-lg font-bold font-heading text-white mb-1">
+                    Rani Shiromoni Paryatak Abas
+                  </h5>
+                  <p class="text-xs text-amber-300/90 font-medium mb-3 flex items-center gap-1">
+                    <i class="fa-solid fa-map-pin text-[10px]"></i> WBTDC Tourism Property, Midnapore
+                  </p>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Official West Bengal Tourism lodge offering serene AC/Non-AC rooms, peaceful campus environment, and dining.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5 mb-2">
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-building-columns text-amber-400 text-[10px]"></i> WBTDC Lodge
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-utensils text-amber-400 text-[10px]"></i> Dining
+                    </span>
+                    <span class="px-2 py-0.5 rounded text-[11px] bg-slate-900/80 border border-white/10 text-slate-300 flex items-center gap-1">
+                      <i class="fa-solid fa-square-parking text-amber-400 text-[10px]"></i> Parking
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="https://rani-shiromoni-paryatak-abas-midnapore-wbtdc.hotelsgds.com/amp/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-center bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-md transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-hotel"></i> Book Hotel Directly
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
           </div>
 
         </div>
